@@ -103,20 +103,29 @@ console.log ("Question Pages!");
 
 // Reset DOM //
 
-$('#questionsOnPage').empty();
-$('#answersOnPage').remove();
-$('#gif').empty();
+// $('#questionsOnPage').empty();
+// $('#answersOnPage').remove();
+// $('#gif').empty();
 
-$('#questionsonPage').text(questions[0]);
+$('#questionsOnPage').text(questions[1].question);
+ 
+
+selectedSet = questions[1];
+
+
+console.log(selectedSet);
+
+$('#question').text(selectedSet.question);
 
 
 
-for (let i = 0; i < questions.choices.length; i++) {
+for (let i = 0; i < selectedSet.choices.length; i++) {
   let userPick = $('<div>');
   userPick.addClass('answers');
-  userPick.text(selectedSet.options[i]);
+  userPick.text(selectedSet.choices[i]);
   userPick.attr("data-value", (i + 1));
   $('#answersOnPage').append(userPick);
+
 
 
 }
