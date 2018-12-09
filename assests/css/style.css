@@ -1,0 +1,12 @@
+/*Background*/
+body {
+
+background-image:url("../images/cartoon_network.jpeg");
+background-size: 100%;
+}
+
+  
+.jumbotron{
+text-align: center;
+}
+
